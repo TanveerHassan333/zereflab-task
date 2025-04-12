@@ -3,7 +3,7 @@
     <div @click="openModal"
       class="cursor-pointer bg-white rounded-2xl shadow-md overflow-hidden w-full max-w-sm transform transition-transform duration-300 hover:scale-105 hover:shadow-lg lg:h-[370px] md:h-[420px] flex flex-col">
       <div class="relative">
-        <img :src="product.thumbnail" :alt="product.title" class="w-full h-56 object-cover" />
+        <img :src="product.thumbnail" :alt="product.title" class="w-full h-56 object-contain" />
         <div class="absolute top-2 right-2 flex gap-2 z-10">
           <!-- Wishlist Button -->
           <button @click.stop="toggleWishlist" class="bg-white p-1 rounded-full shadow hover:bg-gray-100">
@@ -13,7 +13,7 @@
                    3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 
                    3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
-            <svg v-else class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" stroke-width="2"
+            <svg v-else class="w-4 h-5 text-red-500" fill="none" stroke="currentColor" stroke-width="2"
               viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                    2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 
@@ -55,8 +55,8 @@
           &times;
         </button>
 
-        <img :src="product.thumbnail" class="w-full h-64 object-cover rounded mb-4" />
-        <h2 class="text-2xl font-bold mb-2 pt-4">{{ product.title }}</h2>
+        <img :src="product.thumbnail" class="w-full h-64 object-contain rounded mb-4" />
+        <h2 class="text-xl font-medium mb-2 pt-4">{{ product.title }}</h2>
         <p class="text-gray-700 mb-4">{{ product.description }}</p>
 
         <div class="flex items-center justify-between mb-4">
